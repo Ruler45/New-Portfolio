@@ -1,24 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project.
 
 ## Getting Started
 
-First, run the development server:
+# Next.Js
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is template for React created with vite. This template reduces your configuration which you can utilize in your productivity.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This template is configured with ESLint and Prettier for lint rules and better writing. CI/CD configured for ESLint through Github Actions.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+We alse have husky configured for pre-commits.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+For CSS we have sass and tailwind configured.
+
+The package manager used in this project is PNPM.
+
+Just get into the root directory and follow the steps below:
+
+1. pnpm install
+2. pnpm dev (starts your development server)
+
+If you don't have pnpm installed just run "npm add -g pnpm"
 
 ## Learn More
 
