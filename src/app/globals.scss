@@ -6,6 +6,9 @@ body {
   background-color: black;
   color: white;
   overflow: hidden;
+  a {
+    text-decoration: none;
+  }
 }
 
 .loader {
