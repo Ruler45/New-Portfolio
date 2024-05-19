@@ -1,0 +1,134 @@
+.Container {
+  width: 100vw;
+  position: fixed;
+  .Navbar {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .logo {
+      position: relative;
+      width: 150px;
+      height: 50px;
+      filter: invert(1);
+    }
+    .navlinks {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1rem;
+      align-items: center;
+      .navlink {
+        margin-inline: 1rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+        &:hover {
+          background: -webkit-linear-gradient(45deg, #194bfd, #ad13fb);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .active {
+        background: -webkit-linear-gradient(45deg, #194bfd, #ad13fb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      button {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: matrix3d(
+            1.05,
+            0,
+            1,
+            0.0012,
+            0,
+            1.05,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        &:active {
+          transform: matrix3d(
+            1.05,
+            0,
+            1,
+            -0.0012,
+            0,
+            1.05,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+      }
+      @media screen and (max-width: 968px) {
+        position: fixed;
+        top: -100%;
+        left: -60%;
+        width: 100%;
+        height: 70vh;
+        background-color: rgba(11, 10, 10, 0.705);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        transition: all 0.7s ease-in-out;
+        padding-top: 5vh;
+      }
+    }
+    .activeNav {
+      @media screen and (max-width: 968px) {
+        top: 0;
+        left: 0;
+      }
+    }
+    .hamburger {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 100;
+      &:hover {
+        cursor: pointer;
+        transform: matrix3d(
+          1.05,
+          0,
+          1,
+          0.0012,
+          0,
+          1.05,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        );
+      }
+    }
+  }
+}
