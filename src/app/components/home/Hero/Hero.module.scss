@@ -1,0 +1,115 @@
+.hero {
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 80px;
+  padding-top: 10vh;
+  margin-inline: auto;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  .heroContent {
+    width: 45%;
+
+    p {
+      font-size: 1.5vw;
+      margin-top: 1rem;
+    }
+    .heroTitle {
+      text-transform: uppercase;
+      span {
+        background: -webkit-linear-gradient(45deg, #194bfd, #ad13fb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    h2 {
+      font-size: 3vw;
+      margin-top: 1rem;
+      font-weight: 600;
+      .Typewriter {
+        display: inline;
+      }
+    }
+  }
+  .image {
+    width: calc(0.35 * 80vw);
+    height: calc(0.45 * 80vw);
+    position: relative;
+    filter: drop-shadow(0 0 0.75rem #575353);
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: matrix3d(
+        1.05,
+        0,
+        0,
+        0,
+        0,
+        1.05,
+        1,
+        0.0001,
+        0,
+        0,
+        1.05,
+        0,
+        0,
+        0,
+        0,
+        1
+      );
+      &::after {
+        content: "Stop Playing";
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        z-index: 1;
+        background: #ffffffad;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        backdrop-filter: blur(10px);
+        color: black;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    .heroContent {
+      width: 80%;
+      text-align: center;
+      p {
+        font-size: 3vw;
+      }
+      h2 {
+        font-size: 5vw;
+      }
+    }
+    .image {
+      width: 50vw;
+      height: 60vw;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    flex-direction: column-reverse;
+    .heroContent {
+      width: 80%;
+      text-align: center;
+      p {
+        font-size: 4vw;
+      }
+      h2 {
+        font-size: 7vw;
+      }
+    }
+    .image {
+      width: 50vw;
+      height: 60vw;
+    }
+  }
+}

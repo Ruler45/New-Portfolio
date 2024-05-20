@@ -32,6 +32,9 @@ dependencies:
   react-element-to-jsx-string:
     specifier: ^15.0.0
     version: 15.0.0(react-dom@18.2.0)(react@18.2.0)
+  react-simple-typewriter:
+    specifier: ^5.0.1
+    version: 5.0.1(react-dom@18.2.0)(react@18.2.0)
   sass:
     specifier: ^1.71.1
     version: 1.71.1
@@ -6017,6 +6020,20 @@ packages:
       {
         integrity: sha512-Fl7FuabXsJnV5Q1qIOQwx/sagGF18kogb4gpfcG4gjLBWO0WDiiz1ko/ExayuxE7InyQkBLkxRFG5oxY6Uu3Kg==,
       }
+    dev: false
+
+  /react-simple-typewriter@5.0.1(react-dom@18.2.0)(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==,
+      }
+    engines: { node: ">=14" }
+    peerDependencies:
+      react: ">=18.0.0"
+      react-dom: ">=18.0.0"
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react@18.2.0:

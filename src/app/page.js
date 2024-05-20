@@ -1,6 +1,8 @@
 // import Link from "next/link";
 // import Navbar from "./components/Navbar/Navbar";
 
+import Hero from "./components/home/Hero/Hero";
+
 export const metadata = {
   title: "Sahin Alam | Home",
   description:
@@ -10,7 +12,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <Hero />
     </div>
   );
 }
