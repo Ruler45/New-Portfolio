@@ -2,6 +2,7 @@
   width: 100vw;
   position: fixed;
   top: 0;
+  z-index: 999;
   .Navbar {
     width: 90%;
     margin: 0 auto;
@@ -12,6 +13,8 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
     .logo {
       position: relative;
       width: 150px;
@@ -87,21 +90,24 @@
       }
       @media screen and (max-width: 968px) {
         position: fixed;
-        top: -100%;
-        left: -60%;
-        width: 100%;
+        margin: 0;
+        top: -100vh;
+        left: 100vw;
+        width: 100vw;
         height: 70vh;
-        background-color: rgba(11, 10, 10, 0.705);
-        backdrop-filter: blur(10px);
+        background-color: rgba(5, 5, 5, 0.897);
         flex-direction: column;
         transition: all 0.7s ease-in-out;
         padding-top: 5vh;
+        border-radius: 0;
       }
     }
     .activeNav {
       @media screen and (max-width: 968px) {
         top: 0;
         left: 0;
+        position: fixed;
+        backdrop-filter: blur(10px);
       }
     }
     .hamburger {

@@ -2,8 +2,9 @@
 
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.scss";
+import { Boxes } from "../../ui/background-boxes";
 
 const Hero = () => {
   const typewriterRef = useRef(null);
@@ -13,9 +14,16 @@ const Hero = () => {
     document.querySelector(`.${styles.Typewriter}`).style.color =
       color[Math.floor(Math.random() * color.length)];
   };
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+    }
+  }, []);
 
   return (
     <div className={styles.hero}>
+      {width > 900 && <Boxes />}
       <div className={styles.heroContent}>
         <p>Hey There,</p>
         <h2 className={styles.heroTitle}>
