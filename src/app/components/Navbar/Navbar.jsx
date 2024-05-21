@@ -67,7 +67,7 @@ const Navbar = () => {
           })}
 
           <Link
-            href="https://wa.me/6295265705?text=Hello%20Sahin,%20this%20is"
+            href="https://wa.me/916295265705?text=Hello%20Sahin,%20this%20is"
             target="_blank"
           >
             <button className="p-[3px] relative">

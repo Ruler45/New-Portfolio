@@ -8,6 +8,9 @@ dependencies:
   "@iconify-icon/react":
     specifier: ^2.1.0
     version: 2.1.0(react@18.2.0)
+  "@tabler/icons-react":
+    specifier: ^3.4.0
+    version: 3.4.0(react@18.2.0)
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
@@ -2026,6 +2029,25 @@ packages:
       }
     dependencies:
       tslib: 2.6.2
+    dev: false
+
+  /@tabler/icons-react@3.4.0(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-hwRXZ//7B3d8FSb2loMj67s8UZeneCsOCs+Acv0KllWXS15brpFjdi6ROf/Vq5+vr1brFf+xmSTiQkKlEF1Yaw==,
+      }
+    peerDependencies:
+      react: ">= 16"
+    dependencies:
+      "@tabler/icons": 3.4.0
+      react: 18.2.0
+    dev: false
+
+  /@tabler/icons@3.4.0:
+    resolution:
+      {
+        integrity: sha512-6gYHXG0xAJgt2KPcTYDqhe3xYoJMTgz/ZfYup4EUHsxzYsz6rBlt8WgavHsGaWckaqH7ApR/epYslfXZjK27yw==,
+      }
     dev: false
 
   /@types/eslint-scope@3.7.7:
