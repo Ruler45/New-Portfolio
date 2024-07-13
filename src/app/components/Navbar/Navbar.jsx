@@ -35,7 +35,7 @@ const Navbar = () => {
           <Image src="/images/Sahin-logo.png" alt="Logo" fill />
         </div>
         {ham && (
-          <button onClick={handleHam} className={styles.hamburger} alt>
+          <button onClick={handleHam} className={styles.hamburger}>
             {active ? (
               <Icon
                 icon="line-md:menu-to-close-alt-transition"

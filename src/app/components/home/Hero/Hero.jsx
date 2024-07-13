@@ -2,9 +2,10 @@
 
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import Spline from "@splinetool/react-spline";
+import { useRef } from "react";
 import styles from "./Hero.module.scss";
-import { Boxes } from "../../ui/background-boxes";
+// import { Boxes } from "../../ui/background-boxes";
 
 const Hero = () => {
   const typewriterRef = useRef(null);
@@ -14,16 +15,19 @@ const Hero = () => {
     document.querySelector(`.${styles.Typewriter}`).style.color =
       color[Math.floor(Math.random() * color.length)];
   };
-  const [width, setWidth] = useState(0);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setWidth(window.innerWidth);
-    }
-  }, []);
+  // const [width, setWidth] = useState(0);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setWidth(window.innerWidth);
+  //   }
+  // }, []);
 
   return (
     <div className={styles.hero}>
-      {width > 900 && <Boxes />}
+      {/* {width > 900 && <Boxes className={styles.boxes} />} */}
+      <div className={styles.background}>
+        <Spline scene="https://prod.spline.design/vTTklX0CyzkUgD9p/scene.splinecode" />
+      </div>
       <div className={styles.heroContent}>
         <p>Hey There,</p>
         <h2 className={styles.heroTitle}>

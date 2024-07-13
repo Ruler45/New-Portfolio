@@ -7,11 +7,14 @@
   padding-top: 10vh;
   margin-inline: auto;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
 
   .heroContent {
     width: 45%;
-
+    z-index: 1;
     p {
       font-size: 1.5vw;
       margin-top: 1rem;
@@ -19,7 +22,7 @@
     .heroTitle {
       text-transform: uppercase;
       span {
-        background: -webkit-linear-gradient(45deg, #194bfd, #ad13fb);
+        background: -webkit-linear-gradient(45deg, #e45204, #13fb36);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -70,6 +73,9 @@
         border-radius: 0.3rem;
         backdrop-filter: blur(10px);
         color: black;
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
       }
     }
     img {
@@ -77,9 +83,19 @@
       height: auto;
     }
   }
-
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    // z-index: -1;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
+    position: relative;
+    margin-top: 0;
+    padding-top: 2rem;
     .heroContent {
       width: 80%;
       text-align: center;

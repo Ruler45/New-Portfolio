@@ -1,0 +1,145 @@
+.timeline {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  // width: 100%;
+  gap: 1rem;
+  // align-items: center;
+  .line {
+    width: 2px;
+    background-color: #f0f0f0;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+      position: absolute;
+      top: -5px;
+      left: -4px;
+    }
+  }
+  .timelineItem {
+    display: flex;
+    height: fit-content;
+    width: 45%;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    .title {
+      font-size: 1.7rem;
+      color: rgb(148, 61, 27);
+    }
+    .Institute,
+    .date {
+      font-size: 1rem;
+      color: #6c6a6a;
+    }
+    .content {
+      font-size: 1.2rem;
+    }
+    .timelineContent {
+      border: 2px solid rgb(98, 0, 255);
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+    &::after {
+      // clip-path: polygon(0 0, 100% 50%, 0 100%);
+      width: 20px;
+      height: 20px;
+      border: 1px solid;
+      background-color: #f0f0f0;
+      content: "";
+      position: absolute;
+      top: 50%;
+    }
+    &:nth-child(2n + 1) {
+      transform: translateX(120%);
+      &::after {
+        clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        left: 0;
+        transform-origin:
+          -50%,
+          -50%;
+        transform: translateX(-100%);
+      }
+
+      &:hover {
+        transform: translateX(120%) scale(1.1);
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.264);
+      }
+    }
+    &:nth-child(2n) {
+      //   text-align: right;
+      &::after {
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        right: 0;
+        transform-origin:
+          -50%,
+          -50%;
+        transform: translateX(100%);
+      }
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.264);
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .line {
+      // display: none;
+      left: 0;
+    }
+    .timelineItem {
+      width: 100%;
+      position: static;
+      margin-left: 1.5rem;
+      &:nth-child(2n + 1) {
+        transform: translateY(0%) translateX(0%);
+        &::after {
+          clip-path: polygon(100% 0, 0 50%, 100% 100%);
+          left: 0;
+          transform-origin:
+            -50%,
+            -50%;
+          transform: translateX(-100%);
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      &:nth-child(2n) {
+        transform: translateY(0%);
+        &::after {
+          clip-path: polygon(100% 0, 0 50%, 100% 100%);
+          left: 0;
+          transform-origin:
+            -50%,
+            -50%;
+          transform: translateX(-100%);
+        }
+      }
+      .title {
+        font-size: 1.3rem;
+      }
+      .Institute,
+      .date {
+        font-size: 0.8rem;
+        color: #6c6a6a;
+      }
+      .content {
+        font-size: 1rem;
+      }
+      .timelineContent {
+        border: 2px solid rgb(98, 0, 255);
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
