@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    // position: relative;
     backdrop-filter: blur(10px);
     border-radius: 2rem;
     .logo {
@@ -90,24 +90,24 @@
       }
       @media screen and (max-width: 968px) {
         position: fixed;
-        margin: 0;
         top: -100vh;
         left: 100vw;
         width: 100vw;
         height: 70vh;
-        background-color: rgba(5, 5, 5, 0.897);
+        background-color: rgba(0, 0, 0, 0.903);
+        backdrop-filter: blur(15px);
         flex-direction: column;
-        transition: all 0.7s ease-in-out;
+        transition: all 0.5s ease-in-out;
         padding-top: 5vh;
-        border-radius: 0;
+        // border-radius: 0;
       }
     }
     .activeNav {
       @media screen and (max-width: 968px) {
-        top: 0;
-        left: 0;
+        top: -1rem;
+        left: -5vw;
         position: fixed;
-        backdrop-filter: blur(10px);
+        // backdrop-filter: blur(10px);
       }
     }
     .hamburger {

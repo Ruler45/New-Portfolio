@@ -1,8 +1,9 @@
 // import Link from "next/link";
 // import Navbar from "./components/Navbar/Navbar";
 
+import About from "./components/About/About";
 import Hero from "./components/home/Hero/Hero";
-import Macbook from "./components/Macbook/Macbook";
+// import Macbook from "./components/Macbook/Macbook";
 
 export const metadata = {
   title: "Sahin Alam | Home",
@@ -14,8 +15,12 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      {/* <MacbookScroll/> */}
-      <Macbook />
+      <About />
+      <div
+        style={{
+          height: "100vh",
+        }}
+      ></div>
     </div>
   );
 }

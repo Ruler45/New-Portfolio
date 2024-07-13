@@ -11,7 +11,8 @@
     height: 40%;
     text-align: center;
     transition: all 0.5s ease;
-    background-color: black;
+    // background-color: linear-gradient(45deg, #0e0e10, #17171a);
+    background-image: linear-gradient(45deg, #0e0e10 60%, #17171a);
     z-index: 2;
     position: relative;
     border-radius: 0.5vw;
