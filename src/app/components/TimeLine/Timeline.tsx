@@ -4,6 +4,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import styles from "./Timeline.module.scss";
+import { Meteors } from "../ui/meteors";
 const Timeline = () => {
   const data = [
     {
@@ -20,16 +21,16 @@ const Timeline = () => {
       title: "Schooling 5-10",
       Institute: "St.Joseph's English Medium School",
       content:
-        "I was born in a small town in India called Jiaganj in the state of West Bengal.",
+        "Studied in St.Joseph's English Medium School, Jiaganj from class 5 to class 10. This school affiliated to ICSE board deepen my roots in English and Mathematics. ",
       startDate: "April 2014",
       endDate: "March 2020",
     },
     {
       id: "3",
       title: "Schooling 11-12",
-      Institute: "St.Joseph's English Medium School",
+      Institute: "KIIT Internation School,Odissa",
       content:
-        "I was born in a small town in India called Jiaganj in the state of West Bengal.",
+        "Studied in KIIT International School, Bhubaneswar from class 11 to class 12. This school affiliated to CBSE board helped me to explore the world of Physics and Chemistry.",
       startDate: "April 2020",
       endDate: "June 2022",
     },
@@ -38,9 +39,9 @@ const Timeline = () => {
       title: "Bachelor's of Technology ",
       Institute: "National Institute of Technology, Silchar",
       content:
-        "I was born in a small town in India called Jiaganj in the state of West Bengal.",
+        "Currently pursuing my Bachelor's of Technology in Computer Science and Engineering from National Institute of Technology, Silchar. This college has helped me to explore the world of Computer Science and Engineering.",
       startDate: "July 2022",
-      endDate: "June 2026",
+      endDate: "Present",
     },
   ];
   useEffect(() => {
@@ -70,6 +71,7 @@ const Timeline = () => {
               )}
               {item.date && <p className={styles.date}>{item.date}</p>}
               <p className={styles.content}>{item.content}</p>
+              <Meteors number={10} />
             </div>
           </div>
         );

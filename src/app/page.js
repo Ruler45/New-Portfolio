@@ -16,11 +16,11 @@ export default function Home() {
     <div>
       <Hero />
       <About />
-      <div
+      {/* <div
         style={{
           height: "100vh",
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 }

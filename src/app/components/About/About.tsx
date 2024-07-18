@@ -6,16 +6,11 @@ import { Meteors } from "../ui/meteors";
 import styles from "./About.module.scss";
 const About = () => {
   return (
-    <div className={styles.About}>
+    <div className={styles.About} id="about">
       <Title title="About" />
       <Timeline />
       <Meteors number={50} />
       <Skills />
-      <div
-        style={{
-          height: "100vh",
-        }}
-      ></div>
     </div>
   );
 };

@@ -9,11 +9,11 @@ import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   const navlinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Blogs", path: "/blogs" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", path: "#top" },
+    { name: "About", path: "#about" },
+    { name: "Skills", path: "#skills" },
+    { name: "Projects", path: "#projects" },
+    { name: "Contact", path: "#contact" },
   ];
   const [ham, setHam] = useState(false);
   const [active, setActive] = useState(false);
