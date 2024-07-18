@@ -11,22 +11,19 @@
     // width: 100%;
     .card {
       width: 25rem;
-      // width: 20rem;
       padding: 1rem;
       border-radius: 10px;
       border: 1px solid #3468f5;
       background-color: rgb(22, 22, 22);
       box-shadow:
-        0 0 5px 1px #48abe0,
-        0 0 4px 1px #ebecca;
+        0 0 1px 1px #48abe0,
+        0 0 2px 1px #ebecca;
       transition: 0.3s;
       &:hover {
         // cursor: pointer;
         box-shadow:
-          0 0 5px 1px #48abe0,
-          0 0 4px 1px #ebecca,
-          0 0 5px 2px #8a2be2,
-          0 0 2px 1px #ff1493;
+          0 0 3px 1px #48abe0,
+          0 0 2px 1px #ebecca;
         transform: scale(1.05);
       }
       .cardTitle {
@@ -34,6 +31,12 @@
         font-weight: bold;
         margin-bottom: 1rem;
         text-align: center;
+        @media screen and (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: 1rem;
+        }
       }
       ul {
         list-style-type: none;
@@ -50,6 +53,12 @@
           border: 1px solid #3468f5;
           border-radius: 5px;
           font-size: 1rem;
+          @media screen and (max-width: 768px) {
+            font-size: 0.8rem;
+          }
+          @media screen and (max-width: 480px) {
+            font-size: 0.6rem;
+          }
         }
       }
     }
