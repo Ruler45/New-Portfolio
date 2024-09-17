@@ -39,7 +39,7 @@ const Timeline = () => {
       title: "Bachelor's of Technology ",
       Institute: "National Institute of Technology, Silchar",
       content:
-        "Currently pursuing my Bachelor's of Technology in Computer Science and Engineering from National Institute of Technology, Silchar. This college has helped me to explore the world of Computer Science and Engineering.",
+        "Currently pursuing my Bachelor's of Technologyfrom National Institute of Technology, Silchar. This college has helped me to explore the world of Engineering and Technology.",
       startDate: "July 2022",
       endDate: "Present",
     },

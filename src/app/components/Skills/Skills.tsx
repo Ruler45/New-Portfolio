@@ -1,4 +1,5 @@
-// import { CodeXml } from "lucide-react";
+"use client";
+
 import {
   IconBrandCss3,
   IconBrandHtml5,
@@ -12,11 +13,19 @@ import {
   IconBrandTailwind,
 } from "@tabler/icons-react";
 import { Icon } from "@iconify/react";
+import AOS from "aos";
+import { useEffect } from "react";
 import Title from "../Title/Title";
+import "aos/dist/aos.css";
 import styles from "./Skill.module.scss";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
 
 const Skills = () => {
+  useEffect(() => {
+    AOS.init({
+      anchorPlacement: "center-bottom",
+    });
+  }, []);
   const skills = [
     {
       id: "1",
@@ -159,8 +168,14 @@ const Skills = () => {
     <div className={styles.Skills} id="skills">
       <Title title="Tech Skills" />
       <div className={styles.cardContainer}>
-        {skills.map((skill) => (
-          <div className={styles.card} key={skill.id}>
+        {skills.map((skill, id) => (
+          <div
+            className={styles.card}
+            key={skill.id}
+            data-aos={`${id % 2 === 0 ? "flip-right" : "flip-left"}`}
+            data-aos-delay={`${id * 200}`}
+            data-aos-duration="1000"
+          >
             <div className={styles.cardTitle}>{skill.title}</div>
             <div className={styles.cardBody}>
               <ul>
