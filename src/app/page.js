@@ -3,6 +3,7 @@
 
 import About from "./components/About/About";
 import Hero from "./components/home/Hero/Hero";
+// import Footer from "./components/Footer/Footer";
 // import Macbook from "./components/Macbook/Macbook";
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function Home() {
     <div>
       <Hero />
       <About />
+      {/* <Footer/> */}
       {/* <div
         style={{
           height: "100vh",
